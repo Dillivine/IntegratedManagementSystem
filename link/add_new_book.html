@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>MRC LIBRARY MANAGEMENT SYSTEM</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="../style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+		  <img src="images/mrc.jpg" alt="mrc logo" height="55" width="110"> 
+          <h1>Welcome To The Library Management System</h1>
+         
+        </div>
+      </div>
+	
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+          <li class="selected"><a href="circulation.html">Circulation</a></li>
+          <li><a href="catalog.html">Cataloging</a></li>
+          <li><a href="admin.html">Admin</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </div>
+	   
+	<!-- This is were the links to the php scripts would be -->
+	    <div class = "left_1">
+	  <h3>Choose content</h3>
+         <ul>
+          <li><a href="books_list.html">Books List</a></li>
+          <li><a href="add_new_book.html">Add Book</a></li>
+          <li><a href="#">Delete Book</a></li>
+          <li><a href="#">Book Search</a></li>
+        </ul>
+	   </div>
+	  
+	  
+    </div>
+
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>MRC Library</h3>
+        <h4>New Website Launched</h4>
+        <p>Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+     
+        <h3>You can go to our Website</h3>
+        <ul>
+          <li><a href="http://www.mrc.gm/">Mrc Site</a></li>
+          <li><a href="#">link 2</a></li>
+        </ul>
+		
+		
+		 <!-- SEARCH -->
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="" />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="../style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+		
+		<!-- inserting form here -->
+
+<form method="POST" action="connect_books.php">
+<table class="primary" align="center">
+  <tr>
+    <th colspan="2" nowrap="yes" align="left">
+      Add New Book:    </th>
+  </tr>
+<tr>
+<td nowrap="true" class="primary">
+Tiltle:</td>
+<td nowrap="true" class="primary">
+<input type="text" name="title" size="40" maxlength="30" style="visibility: visible" onChange="modified=true" />    </td>
+</tr>
+  <tr>
+    <td nowrap="true" class="primary">
+      Material Type:    </td>
+    <td valign="top" class="primary">
+<select id="id" name="mt"><option value="1">Books</option><option value="2">Journals</option><option value="3">Thesis</option><option value="4">Magazines</select>
+      </td></tr>
+<tr>
+    <td nowrap="true" class="primary">
+      Available:    </td>
+    <td valign="top" class="primary">
+<select id="id" name="avail"><option value="1">Yes</option><option value="2">No</option></select>
+      </td></tr>
+  
+    <td nowrap="true" class="primary">
+      Barcode Number:    </td>
+    <td valign="top" class="primary">
+      <input type="text" name="bn" size="40" maxlength="30" style="visibility: visible" onChange="modified=true" />    </td>
+  </tr>
+  <tr>
+    <td nowrap="true" class="primary">
+      Author:    </td>
+    <td valign="top" class="primary">
+      <input type="text" name="au" size="40" maxlength="40" style="visibility: visible" onChange="modified=true" />    </td>
+  </tr>
+    
+	<tr>
+    <td nowrap="true" class="primary">
+      Year:    </td>
+    <td valign="top" class="primary">
+      <input type="text" name="yr" size="40" maxlength="40" style="visibility: visible" onChange="modified=true" />    </td>
+  </tr>
+  
+  
+  <tr>
+    <td align="center" colspan="2" class="primary">
+      <input type="submit" value="  Add  " class="button">
+    </td>
+  </tr>
+  
+    <tr>
+	<td>
+  <input type="submit" value="add to the database">
+    </td>
+  </tr>
+</table>
+      </form>
+
+
+</div>
+    </div>
+   	<footer>
+    <div id="footer">
+      Copyright &copy; MRC GAMBIA | <a href="http://www.mrc.gm/">MRC</a> 
+    </div>
+  </div>
+  </footer>
+  </div>
+</body>
+</html>
